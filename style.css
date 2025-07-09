@@ -1,0 +1,100 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+/* Centered heading */
+h1.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #333;
+  pointer-events: none;
+}
+
+/* Clear button styling */
+#clear-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 8px 14px;
+  font-size: 1rem;
+  background-color: #ff453a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 69, 58, 0.5);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+#clear-btn:hover {
+  background-color: #e03e33;
+}
+
+/* Floating quotes styling */
+body h1:not(.centered) {
+  position: absolute;
+  font-size: 1.6rem;
+  color: #fff;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 700;
+  pointer-events: none;
+  user-select: none;
+  padding: 10px;
+  line-height: 1.2;
+  transform: scale(0);
+  animation: scaleUp 0.5s forwards cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* Scale up animation */
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body h1:not(.centered) {
+    width: 90px;
+    height: 90px;
+    font-size: 1.2rem;
+  }
+
+  h1.centered {
+    font-size: 2rem;
+  }
+
+  #clear-btn {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+}
