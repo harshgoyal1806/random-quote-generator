@@ -21,7 +21,6 @@ JavaScript – for interactivity and quote logic
 
 🙌 Acknowledgments
 Thanks to the open-source community for inspiration and tools.
-
 Special thanks to MDN Web Docs and W3Schools for excellent HTML, CSS, and JS documentation.
 
 📄 License

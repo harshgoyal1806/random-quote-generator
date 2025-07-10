@@ -21,8 +21,6 @@ const arr = [
   "Bye"
 ];
 
-const colors = ["#FF6B6B", "#6BCB77", "#4D96FF", "#FFD93D", "#FF6F91"];
-
 const body = document.querySelector("body");
 const maxQuotes = 8;
 const circleSize = 120; // px, must match CSS width/height for desktop
